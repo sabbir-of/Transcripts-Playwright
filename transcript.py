@@ -8,10 +8,10 @@ def run(playwright):
 
     page.goto("https://teams.microsoft.com")
     # Add steps to log in
-    page.fill('input[type="email"]', "sabbir.of@outlook.com")
+    page.fill('input[type="email"]', "inputemail")
     page.click('input[type="submit"]')
     page.wait_for_load_state("networkidle")
-    page.fill("//input[@type='password']", "Ilovemymother1@34")
+    page.fill("//input[@type='password']", "inputpassword")
     page.click('#idSIButton9')
 
     page.wait_for_load_state("networkidle")
@@ -37,7 +37,7 @@ def run(playwright):
     page.get_by_label("Turn on live captions").click()
     page.get_by_role("button", name="Confirm").click()
 
-    with open("D:/2024/USA Project/msteams-playwright/index.js", "r") as file:
+    with open("/index.js", "r") as file:
         script_content = file.read()
     # Inject JavaScript code to monitor and update transcripts in localStorage
     resut = page.evaluate(script_content)
