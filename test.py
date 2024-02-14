@@ -53,7 +53,7 @@ def join_meeting_and_extract_transcripts(meeting_url, js_code, output_file_path)
             browser.close()
 
 # JavaScript code to monitor and store transcripts
-js_code = "/script.js"
+js_code = "/index.js"
 
 
 
