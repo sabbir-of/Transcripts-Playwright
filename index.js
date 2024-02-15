@@ -3,7 +3,9 @@ function monitorTranscripts() {
   function extractTranscriptData() {
     // Replace with the actual selector for transcript text in Microsoft Teams.
     // This is just a placeholder selector.
-    const transcriptSelector = "div.fui-Flex.___inloz00";
+    const iframe = document.querySelector('iframe');
+        const transcriptSelector = iframe.contentWindow.document.querySelectorAll('.ui-chat__item');
+    // const transcriptSelector = "div.fui-Flex.___inloz00";
     const transcriptElement = document.querySelector(transcriptSelector);
 
     return transcriptElement ? transcriptElement.innerText : "";
